@@ -1,0 +1,144 @@
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--gold), var(--border) 90%);
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item__marker {
+  position: absolute;
+  left: -32px;
+  top: 6px;
+}
+
+.timeline-item__dot {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--gold);
+}
+
+.timeline-item__dot--current {
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(201, 162, 75, 0.18);
+}
+
+.timeline-item__card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 30px;
+  width: 100%;
+  transition: border-color 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+.timeline-item__card:hover {
+  border-color: var(--teal);
+  transform: translateX(4px);
+}
+
+.timeline-item__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.timeline-item__company {
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.timeline-item__badge {
+  font-size: 0.7rem;
+  color: var(--bg);
+  background: var(--teal-soft);
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.timeline-item__roles {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-item__role {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.timeline-item__role-title {
+  color: var(--gold-soft);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.timeline-item__role-period {
+  color: var(--muted-2);
+  font-size: 0.82rem;
+}
+
+.timeline-item__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timeline-item__highlights li {
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+}
+
+.timeline-item__highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 24px;
+  }
+  .timeline-item__marker {
+    left: -24px;
+  }
+  .timeline-item__card {
+    padding: 22px 20px;
+  }
+}

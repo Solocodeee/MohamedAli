@@ -1,0 +1,46 @@
+.logo__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f4f1ea;
+  border: 1px solid rgba(12, 31, 57, 0.08);
+}
+
+.logo__chip--icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.logo__chip--wide {
+  padding: 7px 14px 7px 10px;
+  border-radius: 10px;
+}
+
+.logo__wordmark-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1;
+}
+
+.logo__wordmark {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  color: #0c1f39;
+  white-space: nowrap;
+}
+
+.logo__subtitle {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+  font-size: 0.56rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0c1f39;
+  opacity: 0.65;
+  white-space: nowrap;
+}
